@@ -1,5 +1,5 @@
 import "../scss/app.scss";
-import pluck from "ramda/src/pluck";
+import * as R from "ramda";
 
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
     { job: "programmer", class: "is-danger" },
   ];
 
-  const pluckArr = pluck("class", arrayToPluck);
+  const pluckArr = R.pluck("class", arrayToPluck);
   console.log(pluckArr);
 
   const articles = document.querySelectorAll("article");
